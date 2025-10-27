@@ -1,0 +1,1 @@
+write a js program to create a gp series and print the sum of series
