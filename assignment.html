@@ -1,0 +1,191 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Student Homepage</title>
+
+    <script>
+    function showMarks() {
+        let m1 = document.getElementById("m1").value;
+        let m2 = document.getElementById("m2").value;
+        let m3 = document.getElementById("m3").value;
+
+        document.getElementById("marksOutput").innerHTML =
+            "Entered Marks: " + m1 + ", " + m2 + ", " + m3;
+    }
+
+    function calculatePercentage() {
+        let m1 = Number(document.getElementById("m1").value);
+        let m2 = Number(document.getElementById("m2").value);
+        let m3 = Number(document.getElementById("m3").value);
+
+        let total = m1 + m2 + m3;
+        let percentage = (total / 300) * 100;
+
+        document.getElementById("percentageOutput").innerHTML =
+            "Percentage Obtained: " + percentage + "%";
+    }
+
+    function resetMarks() {
+    document.getElementById("m1").value = "";
+    document.getElementById("m2").value = "";
+    document.getElementById("m3").value = "";
+    document.getElementById("result").innerHTML = "";
+}
+
+    </script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 30px;
+            background-color:  #f5f5f5;
+            color: #000000;
+        }
+
+        .container {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 15px;
+            position:  relative;
+        }
+
+        .profile-pic {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            width: 170x;
+            height: 170px;
+            border: 2px solid #333;
+        }
+
+        h1, h2 {
+            color: #333;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+
+        table, th, td {
+            border: 1px solid #555;
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: center;
+        }
+
+        .section {
+            margin-top: 35px;
+        }
+
+        input[type="number"] {
+            padding: 6px;
+            width: 80px;
+        }
+
+        button {
+            padding: 8px 15px;
+            margin-top: 10px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        ul {
+            list-style-type: circle;
+        }
+
+        .declaration {
+            margin-top: 15px;
+            padding: 10px;
+            background-color: #eef;
+            border-left: 5px solid #007bff;
+        }
+
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+   
+    <img src="unnamed.jpg"  class="profile-pic">
+
+    <h1>Student Homepage</h1>
+
+    <div class="section">
+        <h2>Personal Information</h2>
+        <p><strong>Name:</strong> Priyasha Haldar</p>
+        <p><strong>Email:</strong> priyashahaldar2005@gmail.com</p>
+    </div>
+
+    <!-- Academic Records -->
+    <div class="section">
+        <h2>Academic Records</h2>
+        <table>
+            <tr>
+                <th>Examination</th>
+                <th>Institution</th>
+                <th>Year</th>
+                <th>Percentage</th>
+            </tr>
+            <tr>
+                <td>10th</td>
+                <td>Holy Child Institute</td>
+                <td>2022</td>
+                <td>81%</td>
+            </tr>
+            <tr>
+                <td>12th</td>
+                <td>Dum Dum Ananda Ashram Sarada Vidyapeeth</td>
+                <td>2024</td>
+                <td>73%</td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="section">
+        <h2>Internal Marks</h2>
+
+        Subject 1: <input type="number" id="m1"><br><br>
+        Subject 2: <input type="number" id="m2"><br><br>
+        Subject 3: <input type="number" id="m3"><br><br>
+
+        <button onclick="showMarks()">Submit Marks</button>
+        <button onclick="calculatePercentage()">Calculate Percentage</button>
+        <button onclick="resetMarks()">Reset</button>
+
+        <p id="marksOutput"></p>
+        <p id="percentageOutput"></p>
+    </div>
+
+    <div class="section">
+        <h2>Favourite Websites</h2>
+        <ul>
+            <li><a href="https://www.geeksforgeeks.org/" target="_blank">GeeksforGeeks</a></li>
+    <li><a href="https://stackoverflow.com/" target="_blank">Stack Overflow</a></li>
+            <li><a href="https://www.github.com" target="_blank">GitHub</a></li>
+        </ul>
+    </div>
+
+    <div class="section declaration">
+        <h2>Self Declaration</h2>
+        <p>
+            I hereby declare that all the information provided above is true and correct
+            to the best of my knowledge and belief.
+        </p>
+    </div>
+
+</div>
+
+</body>
+</html>
